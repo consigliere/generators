@@ -1,9 +1,9 @@
 <?php
 /**
- * Created by consigliere on August 17th 2015, 11:20:48 am.
+ * Created by <%= author_username %> on <%= dateTime.now %>.
  */
 
-namespace Consigliere\Generators\Test;
+namespace <%= author_username_sc %>\<%= package_name_sc %>\Test;
 
 
 class ExampleTest extends \PHPUnit_Framework_TestCase

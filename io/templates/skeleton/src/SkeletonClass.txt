@@ -1,15 +1,15 @@
 <?php
 /**
- * Created by consigliere on August 17th 2015, 11:20:48 am.
+ * Created by <%= author_username %> on <%= dateTime.now %>.
  */
 
-namespace Consigliere\Generators;
+namespace <%= author_username_sc %>\<%= package_name_sc %>;
 
 
-class GeneratorsClass
+class <%= package_name_sc %>Class
 {
     /**
-     * Create a new Generators Instance
+     * Create a new <%= package_name_sc %> Instance
      */
     public function __construct()
     {
