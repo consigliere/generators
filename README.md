@@ -13,23 +13,42 @@ PSRs you support to avoid any confusion with users and contributors.
 
 ## Install
 
-Via Composer
-
-``` bash
-$ composer require consigliere/generators
-```
+Clone the repo
 
 ## Usage
 
 ``` php
-$generators = new Consigliere\Generators();
-echo $generators->echoPhrase('Hello, Consigliere!');
+# Edit packages data in config/dataSrc/dataSrc.json
+# Configuration : config.js.
+
+# In the command line :
+
+# League
+gulp -g league
+
+# Composer
+gulp -g composer
+
+# Laravel 5
+gulp -g laravel
+
+# Angularjs / ngApps
+gulp -g ngApps
+
+# Angularjs / ngApp
+gulp -g ngApp
+
+# Generator Laravel 5 package / ng apps
+gulp -g laravel --ngApps
+
+# Generator Laravel 5 package / ng app
+gulp -g laravel --ngApp
 ```
 
 ## Testing
 
 ``` bash
-$ phpunit
+
 ```
 
 ## Contributing
