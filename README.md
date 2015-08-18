@@ -8,7 +8,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/consigliere/generators.svg?style=flat-square)](https://packagist.org/packages/consigliere/generators)
 
 Generators - Generate application / package skeleton based on [skeleton](https://github.com/thephpleague/skeleton). 
-Provide support for PHP, league, composer, laravel, nodejs and angularjs based project. 
+Provide support for PHP, league, composer, laravel 5.1, nodejs and angularjs based project. 
 
 ## Install
 
