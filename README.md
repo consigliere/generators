@@ -13,7 +13,7 @@ PSRs you support to avoid any confusion with users and contributors.
 
 ## Install
 
-Clone the repo
+Clone the repo, in the project root do `npm install`.
 
 ## Usage
 
