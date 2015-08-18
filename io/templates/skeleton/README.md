@@ -1,13 +1,12 @@
 # <%= package_name %>
 
-[![Latest Version](https://img.shields.io/github/release/<%= author_username_alt %>/<%= package_name %>.svg?style=flat-square)](https://github.com/<%= author_username_alt %>/<%= package_name %>/releases)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/<%= author_username_alt %>/<%= package_name %>/master.svg?style=flat-square)](https://travis-ci.org/<%= author_username_alt %>/<%= package_name %>)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/<%= author_username_alt %>/<%= package_name %>.svg?style=flat-square)](https://scrutinizer-ci.com/g/<%= author_username_alt %>/<%= package_name %>/code-structure)
-[![Quality Score](https://img.shields.io/scrutinizer/g/<%= author_username_alt %>/<%= package_name %>.svg?style=flat-square)](https://scrutinizer-ci.com/g/<%= author_username_alt %>/<%= package_name %>)
-[![Total Downloads](https://img.shields.io/packagist/dt/<%= author_username %>/<%= package_name %>.svg?style=flat-square)](https://packagist.org/packages/<%= author_username %>/<%= package_name %>)
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Software License][ico-license]](LICENSE.md)
+[![Build Status][ico-travis]][link-travis]
+[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
+[![Quality Score][ico-code-quality]][link-code-quality]
+[![Total Downloads][ico-downloads]][link-downloads]
 
-<%= package_description %>
 This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
 PSRs you support to avoid any confusion with users and contributors.
 
@@ -26,10 +25,14 @@ $<%= package_name %> = new <%= author_username_sc %>\<%= package_name_sc %>();
 echo $<%= package_name %>->echoPhrase('Hello, <%= author_username_sc %>!');
 ```
 
+## Change log
+
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+
 ## Testing
 
 ``` bash
-$ phpunit
+$ composer test
 ```
 
 ## Contributing
@@ -42,9 +45,24 @@ If you discover any security related issues, please email <%= author_email %> in
 
 ## Credits
 
-- [<%= author_name %>](https://github.com/<%= author_username %>)
-- [All Contributors](../../contributors)
+- [<%= author_name %>][link-author]
+- [All Contributors][link-contributors]
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+[ico-version]: https://img.shields.io/packagist/v/<%= author_username_alt %>/<%= package_name %>.svg?style=flat-square
+[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/<%= author_username_alt %>/<%= package_name %>/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/<%= author_username_alt %>/<%= package_name %>.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/<%= author_username_alt %>/<%= package_name %>.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/<%= author_username %>/<%= package_name %>.svg?style=flat-square
+
+[link-packagist]: https://packagist.org/packages/<%= author_username_alt %>/<%= package_name %>
+[link-travis]: https://travis-ci.org/<%= author_username_alt %>/<%= package_name %>
+[link-scrutinizer]: https://scrutinizer-ci.com/g/<%= author_username_alt %>/<%= package_name %>/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/<%= author_username_alt %>/<%= package_name %>
+[link-downloads]: https://packagist.org/packages/<%= author_username %>/<%= package_name %>
+[link-author]: https://github.com/<%= author_username %>
+[link-contributors]: ../../contributors
