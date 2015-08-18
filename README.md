@@ -1,14 +1,15 @@
 # generators
 
-[![Latest Version](https://img.shields.io/github/release/consigliere/generators.svg?style=flat-square)](https://github.com/consigliere/generators/releases)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/consigliere/generators/master.svg?style=flat-square)](https://travis-ci.org/consigliere/generators)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/consigliere/generators.svg?style=flat-square)](https://scrutinizer-ci.com/g/consigliere/generators/code-structure)
-[![Quality Score](https://img.shields.io/scrutinizer/g/consigliere/generators.svg?style=flat-square)](https://scrutinizer-ci.com/g/consigliere/generators)
-[![Total Downloads](https://img.shields.io/packagist/dt/consigliere/generators.svg?style=flat-square)](https://packagist.org/packages/consigliere/generators)
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Software License][ico-license]](LICENSE.md)
+[![Build Status][ico-travis]][link-travis]
+[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
+[![Quality Score][ico-code-quality]][link-code-quality]
+[![Total Downloads][ico-downloads]][link-downloads]
 
 Generators - Generate application / package skeleton based on [skeleton](https://github.com/thephpleague/skeleton). 
 Provide support for PHP, league, composer, laravel 5.1, nodejs and angularjs based project. 
+
 
 ## Install
 
@@ -48,10 +49,14 @@ gulp -g laravel --ngApps
 gulp -g laravel --ngApp
 ```
 
+## Change log
+
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+
 ## Testing
 
 ``` bash
-
+$ composer test
 ```
 
 ## Contributing
@@ -64,9 +69,24 @@ If you discover any security related issues, please email 50c5ac69@opayq.com ins
 
 ## Credits
 
-- [anonymoussc](https://github.com/consigliere)
-- [All Contributors](../../contributors)
+- [anonymoussc][link-author]
+- [All Contributors][link-contributors]
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+[ico-version]: https://img.shields.io/packagist/v/consigliere/generators.svg?style=flat-square
+[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/consigliere/generators/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/consigliere/generators.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/consigliere/generators.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/consigliere/generators.svg?style=flat-square
+
+[link-packagist]: https://packagist.org/packages/consigliere/generators
+[link-travis]: https://travis-ci.org/consigliere/generators
+[link-scrutinizer]: https://scrutinizer-ci.com/g/consigliere/generators/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/consigliere/generators
+[link-downloads]: https://packagist.org/packages/consigliere/generators
+[link-author]: https://github.com/consigliere
+[link-contributors]: ../../contributors
