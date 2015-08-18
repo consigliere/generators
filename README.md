@@ -24,7 +24,7 @@ Clone the repo `git clone https://github.com/consigliere/generators.git`.
 # Edit packages data in config/dataSrc/dataSrc.json
 # Configuration @ config.js.
 
-# Still in project root, available cli command as follow :
+# Available cli command as follow :
 
 # League
 gulp -g league
