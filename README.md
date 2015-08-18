@@ -7,21 +7,27 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/consigliere/generators.svg?style=flat-square)](https://scrutinizer-ci.com/g/consigliere/generators)
 [![Total Downloads](https://img.shields.io/packagist/dt/consigliere/generators.svg?style=flat-square)](https://packagist.org/packages/consigliere/generators)
 
-Generators - Generate application / package skeleton based on [skeleton](https://github.com/thephpleague/skeleton) for league, composer, laravel, nodejs and angularjs project. 
+Generators - Generate application / package skeleton based on [skeleton](https://github.com/thephpleague/skeleton). 
+Provide support for PHP, league, composer, laravel, nodejs and angularjs based project. 
+
 This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
 PSRs you support to avoid any confusion with users and contributors.
 
 ## Install
 
-Clone the repo, in the project root do `npm install`.
+Require [nodejs](https://nodejs.org/).
+
+Clone the repo `git clone https://github.com/consigliere/generators.git`. 
+- In the cli do `npm install gulpjs/gulp-cli#4.0 -g`. 
+- Navigate to the project root then `npm install`.
 
 ## Usage
 
 ``` php
 # Edit packages data in config/dataSrc/dataSrc.json
-# Configuration : config.js.
+# Configuration @ config.js.
 
-# In the command line :
+# Still in project root, available cli command as follow :
 
 # League
 gulp -g league
