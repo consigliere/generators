@@ -10,14 +10,13 @@
 Generators - Generate application / package skeleton based on [skeleton](https://github.com/thephpleague/skeleton). 
 Provide support for PHP, league, composer, laravel 5.1, nodejs and angularjs based project. 
 
-
 ## Install
 
 Require [nodejs](https://nodejs.org/).
 
 Clone the repo `git clone https://github.com/consigliere/generators.git`. 
 - In the cli do `npm install gulpjs/gulp-cli#4.0 -g`. 
-- Navigate to the project root then `npm install`.
+- Navigate to generators directory then `npm install`.
 
 ## Usage
 
@@ -56,7 +55,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 ## Testing
 
 ``` bash
-$ composer test
+
 ```
 
 ## Contributing
