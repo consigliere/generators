@@ -24,7 +24,7 @@ var config   = precompile.config,
 var key = '', keyProtected = 'name', obj = '', countObj = '', count = 0;
 
 var process = {
-    generate : processGenerate
+    generate: processGenerate
 };
 
 function processGenerate() {
@@ -34,7 +34,7 @@ function processGenerate() {
     if ((argv.generator == league.name) || (config.generator == league.name)) {
         if (((argv.generator == league.name) && (!config.generator)) || ((config.generator == league.name) && (!argv.generator))) {
 
-            obj = league;
+            obj      = league;
             countObj = objSize(obj) - 1;
 
             for (key in obj) {
@@ -56,7 +56,7 @@ function processGenerate() {
     else if ((argv.generator == composer.name) || (config.generator == composer.name)) {
         if (((argv.generator == composer.name) && (!config.generator)) || ((config.generator == composer.name) && (!argv.generator))) {
 
-            obj = composer;
+            obj      = composer;
             countObj = objSize(obj) - 1;
 
             for (key in obj) {
@@ -81,7 +81,7 @@ function processGenerate() {
 
             if (argv.ngApps) {
 
-                obj = ngApps;
+                obj      = ngApps;
                 countObj = objSize(obj) - 1;
 
                 for (key in obj) {
@@ -96,7 +96,7 @@ function processGenerate() {
             }
             else if (argv.ngApp) {
 
-                obj = ngApp;
+                obj      = ngApp;
                 countObj = objSize(obj) - 1;
 
                 for (key in obj) {
@@ -110,7 +110,7 @@ function processGenerate() {
                 }
             }
 
-            obj = laravel;
+            obj      = laravel;
             countObj = objSize(obj) - 1;
 
             for (key in obj) {
@@ -133,7 +133,7 @@ function processGenerate() {
     else if ((argv.generator == ngApps.name) || (config.generator == ngApps.name)) {
         if (((argv.generator == ngApps.name) && (!config.generator)) || ((config.generator == ngApps.name) && (!argv.generator))) {
 
-            obj = ngApps;
+            obj      = ngApps;
             countObj = objSize(obj) - 1;
 
             for (key in obj) {
@@ -156,7 +156,7 @@ function processGenerate() {
     else if ((argv.generator == ngApp.name) || (config.generator == ngApp.name)) {
         if (((argv.generator == ngApp.name) && (!config.generator)) || ((config.generator == ngApp.name) && (!argv.generator))) {
 
-            obj = ngApp;
+            obj      = ngApp;
             countObj = objSize(obj) - 1;
 
             for (key in obj) {

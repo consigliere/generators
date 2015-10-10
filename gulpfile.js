@@ -10,12 +10,12 @@
 'use strict';
 
 // Load plugins
-var gulp       = require('gulp'),
-    process    = require('./io/process.js');
+var gulp    = require('gulp'),
+    process = require('./io/process.js');
 
 // generate
 gulp.task('generate', process.generate);
 
 // default
-gulp.task('default', gulp.parallel('generate'));
+// gulp.task('default', gulp.parallel('generate'));
 

@@ -1,8 +1,8 @@
 {
-    "author_name"         : "",
-    "author_username"     : "",
-    "author_website"      : "",
-    "author_email"        : "",
-    "package_name"        : "",
-    "package_description" : ""
+  "author_name"        : "",
+  "author_username"    : "",
+  "author_website"     : "",
+  "author_email"       : "",
+  "package_name"       : "",
+  "package_description": ""
 }
