@@ -14,9 +14,16 @@ Provide support for PHP, league, composer, laravel 5.1, nodejs and angularjs bas
 
 Require [nodejs](https://nodejs.org/).
 
-Clone the repo `git clone https://github.com/consigliere/generators.git`. 
-- In the cli do `npm install gulpjs/gulp-cli#4.0 -g`. 
-- Navigate to generators directory then `npm install`.
+```bash
+# Clone the repo 
+git clone https://github.com/consigliere/generators.git.  
+
+# Navigate to generators base directory 
+cd generators
+
+# Install package dependencies
+npm install.
+```
 
 ## Usage
 
