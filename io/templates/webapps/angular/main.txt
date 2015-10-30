@@ -1,0 +1,21 @@
+(function() {
+    "use strict";
+
+    var app = angular.module('<%= package_name_cc %>',
+        [
+            '<%= package_name_cc %>.controllers',
+            '<%= package_name_cc %>.filters',
+            '<%= package_name_cc %>.services',
+            '<%= package_name_cc %>.directives',
+            '<%= package_name_cc %>.routes',
+            '<%= package_name_cc %>.config'
+        ]);
+
+    angular.module('<%= package_name_cc %>.routes', ['ui.router', 'ngStorage', 'satellizer']);
+    angular.module('<%= package_name_cc %>.controllers', ['ui.router', 'ngMaterial', 'ngStorage', 'restangular', 'ngMdIcons', 'angular-loading-bar']);
+    angular.module('<%= package_name_cc %>.filters', []);
+    angular.module('<%= package_name_cc %>.services', ['ui.router', 'ngStorage', 'restangular']);
+    angular.module('<%= package_name_cc %>.directives', []);
+    angular.module('<%= package_name_cc %>.config', []);
+
+})();

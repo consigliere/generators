@@ -1,0 +1,8 @@
+(function(){
+	"use strict";
+
+	angular.module( '<%= package_name_cc %>.controllers' ).controller( 'DataListingCtrl', function(){
+		//
+    });
+
+})();

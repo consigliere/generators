@@ -1,0 +1,144 @@
+(function() {
+    "use strict";
+
+    angular.module('<%= package_name_cc %>.routes').config(function($stateProvider, $urlRouterProvider) {
+
+        var getView = function(viewName) {
+            return './views/<%= package_name_cc %>/' + viewName + '/' + viewName + '.html';
+        };
+
+        $urlRouterProvider.otherwise('/');
+
+        $stateProvider
+            .state('<%= package_name_cc %>', {
+                abstract: true,
+                views: {
+                    sidebar: {
+                        templateUrl: getView('sidebar')
+                    },
+                    header: {
+                        templateUrl: getView('header')
+                    },
+                    main: {}
+                }
+            })
+            .state('<%= package_name_cc %>.landing', {
+                url: '/',
+                data: { pageName: 'Overview' },
+                views: {
+                    'main@': {
+                        templateUrl: getView('landing')
+                    }
+                }
+            })
+            .state('<%= package_name_cc %>.install', {
+                url: '/install',
+                data: { pageName: 'Install' },
+                views: {
+                    'main@': {
+                        templateUrl: getView('install')
+                    }
+                }
+            })
+            .state('<%= package_name_cc %>.tabs', {
+                url: '/features',
+                data: { pageName: 'Features' },
+                views: {
+                    'main@': {
+                        templateUrl: getView('tabs')
+                    }
+                }
+            })
+            .state('<%= package_name_cc %>.deploy', {
+                url: '/deploy',
+                data: { pageName: 'Deploy' },
+                views: {
+                    'main@': {
+                        templateUrl: getView('deploy')
+                    }
+                }
+            })
+            .state('<%= package_name_cc %>.theme', {
+                url: '/theme',
+                data: { pageName: 'Theme' },
+                views: {
+                    'main@': {
+                        templateUrl: getView('theme')
+                    }
+                }
+            })
+            .state('<%= package_name_cc %>.toasts', {
+                url: '/toasts',
+                data: { pageName: 'Toasts' },
+                views: {
+                    'main@': {
+                        templateUrl: getView('toasts')
+                    }
+                }
+            })
+            .state('<%= package_name_cc %>.dialogs', {
+                url: '/dialogs',
+                data: { pageName: 'Dialogs' },
+                views: {
+                    'main@': {
+                        templateUrl: getView('dialogs')
+                    }
+                }
+            })
+            .state('<%= package_name_cc %>.generators', {
+                url: '/generators',
+                data: { pageName: 'Artisan generators' },
+                views: {
+                    'main@': {
+                        templateUrl: getView('generators')
+                    }
+                }
+            })
+            .state('<%= package_name_cc %>.jwt_auth', {
+                url: '/jwt_auth',
+                data: { pageName: 'JSON Web Token Authentication' },
+                views: {
+                    'main@': {
+                        templateUrl: getView('jwt_auth')
+                    }
+                }
+            })
+            .state('<%= package_name_cc %>.elixir', {
+                url: '/elixir',
+                data: { pageName: 'Elixir' },
+                views: {
+                    'main@': {
+                        templateUrl: getView('elixir')
+                    }
+                }
+            })
+            .state('<%= package_name_cc %>.rest_api', {
+                url: '/rest_api',
+                data: { pageName: 'REST API' },
+                views: {
+                    'main@': {
+                        templateUrl: getView('rest_api')
+                    }
+                }
+            })
+            .state('<%= package_name_cc %>.unsupported_browser', {
+                url: '/unsupported_browser',
+                data: { pageName: 'Unsupported Browser' },
+                views: {
+                    'main@': {
+                        templateUrl: getView('unsupported_browser')
+                    }
+                }
+            })
+            .state('<%= package_name_cc %>.misc', {
+                url: '/misc',
+                data: { pageName: 'Miscellaneous features' },
+                views: {
+                    'main@': {
+                        templateUrl: getView('misc')
+                    }
+                }
+            });
+
+    });
+})();
