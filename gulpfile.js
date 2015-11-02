@@ -19,3 +19,4 @@ gulp.task('generate', process.generate);
 // default
 // gulp.task('default', gulp.parallel('generate'));
 
+gulp.task('default', ['generate']);
