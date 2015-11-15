@@ -9,7 +9,7 @@ var config = {
     // @todo: webapps, appbase
     generator         : '',
     // path to workspace directory
-    workspaces        : './../../../workbench',
+    workspaces        : './../../../app_components',
     // path to template directory
     templatesDirectory: './io/templates',
     // self explanatory, option gulpVersion : '4' or gulpVersion : '3'
