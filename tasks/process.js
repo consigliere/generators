@@ -136,28 +136,6 @@ function processFile(src, fileName, dest) {
 
 }
 
-function objSize(obj) {
-    var count = 0;
-
-    if (typeof obj === "object") {
-
-        if (Object.keys) {
-            count = Object.keys(obj).length;
-        } else if (window._) {
-            count = _.keys(obj).length;
-        } else if (window.$) {
-            count = $.map(obj, function() {
-                return 1;
-            }).length;
-        } else {
-            for (var key in obj) if (obj.hasOwnProperty(key)) count++;
-        }
-
-    }
-
-    return count;
-}
-
 function preProcessFile(o, co) {
     for (key in o) {
         if (o.hasOwnProperty(key)) {
@@ -172,6 +150,33 @@ function preProcessFile(o, co) {
             count++;
         }
     }
+}
+
+function objSize(obj) {
+
+    var count = 0;
+
+    if (typeof obj === "object") {
+
+        if (Object.keys) {
+            count = Object.keys(obj).length;
+        } else if (window._) {
+            count = _.keys(obj).length;
+        } else if (window.$) {
+            count = $.map(obj, function() {
+                return 1;
+            }).length;
+        } else {
+            for (var key in obj) {
+                if (obj.hasOwnProperty(key)) {
+                    count++;
+                }
+            }
+        }
+
+    }
+
+    return count;
 }
 
 module.exports = process;
