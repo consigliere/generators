@@ -6,8 +6,8 @@
 
 var moment  = require('moment'),
     S       = require('string'),
-    dataSrc = require('./../../config/dataSrc/dataSrc.json'),
-    cfg     = require('./../../config/config.js');
+    dataSrc = require('./../config/dataSrc/dataSrc.json'),
+    cfg     = require('./../config/config.js');
 
 // path to directory
 var name     = 'composer',
