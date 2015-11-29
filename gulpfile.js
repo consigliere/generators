@@ -11,12 +11,10 @@
 
 // Load plugins
 var gulp    = require('gulp'),
-    process = require('./io/process.js');
+    process = require('./tasks/generate.js');
 
-// generate
+// Task generate
 gulp.task('generate', process.generate);
 
-// default
-// gulp.task('default', gulp.parallel('generate'));
-
+// Task default
 gulp.task('default', ['generate']);
