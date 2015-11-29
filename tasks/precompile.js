@@ -9,17 +9,17 @@ var moment   = require('moment'),
     argv     = require('yargs').argv,
     dataSrc  = require('./../config/dataSrc/dataSrc.json'),
     config   = require('./../config/config.js'),
-    league   = require('./templates/league.js'),
-    composer = require('./templates/composer.js'),
-    laravel  = require('./templates/laravel.js'),
-    ngApps   = require('./templates/ngApps.js'),
-    ngApp    = require('./templates/ngApp.js');
+    league   = require('./../templates/league.js'),
+    composer = require('./../templates/composer.js'),
+    laravel  = require('./../templates/laravel.js'),
+    ngApps   = require('./../templates/ngApps.js'),
+    ngApp    = require('./../templates/ngApp.js');
 
 var
     precompile = {
         dataSrc : {
             author_name        : dataSrc.author_name,
-            author_username    : whos_yousername(),//dataSrc.author_username,
+            author_username    : whos_yousername(), //dataSrc.author_username
             author_website     : dataSrc.author_website,
             author_email       : dataSrc.author_email,
             package_name       : dataSrc.package_name,
@@ -37,32 +37,27 @@ var
             package_name_cc    : S(dataSrc.package_name).camelize().s // camelCase
         },
         config  : config,
-        appbase : '',
         composer: composer,
         laravel : laravel,
         league  : league,
         ngApps  : ngApps,
-        ngApp   : ngApp,
-        webapps : ''
+        ngApp   : ngApp
     };
 
 function whos_yousername(alt) {
     argv.generator = argv.g ? argv.g : argv.generator;
 
-    if ((argv.generator == league.name) || (config.generator == league.name)) {
-        if (((argv.generator == league.name) && (!config.generator)) || ((config.generator == league.name) && (!argv.generator))) {
+    if ((argv.generator === league.name) || (config.generator === league.name)) {
+        if (((argv.generator === league.name) && (!config.generator)) || ((config.generator === league.name) && (!argv.generator))) {
             if (alt) {
                 return 'thephpleague';
             }
             return league.name;
         }
-    }
-    else {
+    } else {
         return dataSrc.author_username;
     }
 
 }
 
 module.exports = precompile;
-
-// filePath, fileName, fileDestination
