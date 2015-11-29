@@ -1,11 +1,13 @@
 <?php
+/**
+ * Created by <%= author_username %> on <%= dateTime.now %>.
+ */
 
-namespace League\Skeleton\Test;
+namespace <%= author_username_sc %>\<%= package_name_sc %>\Test;
+
 
 class ExampleTest extends \PHPUnit_Framework_TestCase
 {
-
-
     /**
      * Test that true does in fact equal true
      */
