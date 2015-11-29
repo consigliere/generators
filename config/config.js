@@ -4,16 +4,14 @@
 
 'use strict';
 
-var config = {
-    // packages structure type, option available league, composer, laravel, ngApps, ngApp
-    // @todo: webapps, appbase
-    generator         : '',
-    // path to workspace directory
-    workspaces        : './../../../app_components',
-    // path to template directory
-    templatesDirectory: './io/templates',
-    // self explanatory, option gulpVersion : '4' or gulpVersion : '3'
-    gulpVersion       : ''
-};
+var
+    config = {
+        // packages structure type, option available league, composer, laravel,
+        generator         : '',
+        // path to workspace directory
+        workspaces        : './../../../app_components',
+        // path to template directory
+        templatesDirectory: './templates',
+    };
 
 module.exports = config;
