@@ -6,8 +6,8 @@
 
 var moment  = require('moment'),
     S       = require('string'),
-    dataSrc = require('./../../config/dataSrc/dataSrc.json'),
-    cfg     = require('./../../config/config.js');
+    dataSrc = require('./../config/dataSrc/dataSrc.json'),
+    cfg     = require('./../config/config.js');
 
 // path to directory
 var name     = 'laravel',
@@ -21,15 +21,15 @@ var
             src     : [
                 srcPath + '**/**/.*',
                 srcPath + '**/**/*.*',
-                '!' + srcPath + 'src/laravel/*.txt',
+                '!' + srcPath + 'src/laravel/*.stub',
                 '!' + srcPath + 'tests/'
             ],
             fileName: false,
             dest    : destPath
         },
         src  : {
-            src     : srcPath + 'src/laravel/*.txt',
-            fileName: S('-' + dataSrc.package_name).camelize().s + 'ServiceProvider.php', // StudlyCaps,
+            src     : srcPath + 'src/laravel/*.stub',
+            fileName: S('-' + dataSrc.package_name).camelize().s + 'ServiceProvider.php', // StudlyCaps
             dest    : destPath + 'src/' + S('-' + dataSrc.package_name).camelize().s + '/' // StudlyCaps
         },
         tests: {
@@ -37,26 +37,6 @@ var
             fileName: false,
             dest    : destPath + 'tests/'
         }
-
-        //// Process base
-        //baseSrc       : [
-        //    srcPath + '**/**/.*',
-        //    srcPath + '**/**/*.*',
-        //    '!' + srcPath + 'src/laravel/*.txt',
-        //    '!' + srcPath + 'tests/'
-        //],
-        //baseFileName  : false,
-        //baseDest      : destPath,
-        //
-        //// Process src
-        //srcDir        : srcPath + 'src/laravel/*.txt',
-        //srcFileName   : S('-' + dataSrc.package_name).camelize().s + 'ServiceProvider.php', // StudlyCaps
-        //srcDest       : destPath + 'src/' + S('-' + dataSrc.package_name).camelize().s + '/', // StudlyCaps
-        //
-        //// Process tests
-        //testsSrc      : srcPath + 'tests/.*',
-        //testsFileName : false,
-        //testsDest     : destPath + 'tests/'
     };
 
 module.exports = laravel;
