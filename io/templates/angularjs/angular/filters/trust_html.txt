@@ -1,9 +1,0 @@
-(function(){
-	"use strict";
-
-	angular.module('<%= package_name_cc %>.filters').filter( 'trustHtml', function( $sce ){
-		return function( html ){
-			return $sce.trustAsHtml(html);
-		};
-	});
-})();
