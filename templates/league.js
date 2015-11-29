@@ -29,7 +29,7 @@ var
         },
         src  : {
             src     : srcPath + 'src/' + '*.stub',
-            fileName: S('-' + dataSrc.package_name).camelize().s + 'Class.php', // StudlyCaps,
+            fileName: S('-' + dataSrc.package_name).camelize().s + 'Class.php', // StudlyCaps
             dest    : destPath + 'src/'
         },
         tests: {
