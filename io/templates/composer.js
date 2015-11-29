@@ -11,7 +11,7 @@ var moment  = require('moment'),
 
 // path to directory
 var name     = 'composer',
-    srcPath  = cfg.templatesDirectory + '/skeleton/',
+    srcPath  = cfg.templatesDirectory + '/composer/',
     destPath = cfg.workspaces + '/' + dataSrc.author_username + '/' + dataSrc.package_name + '/';
 
 var
