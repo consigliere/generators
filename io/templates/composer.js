@@ -11,7 +11,7 @@ var moment  = require('moment'),
 
 // path to directory
 var name     = 'composer',
-    srcPath  = cfg.templatesDirectory + '/composer/',
+    srcPath  = cfg.templatesDirectory + '/skeleton/',
     destPath = cfg.workspaces + '/' + dataSrc.author_username + '/' + dataSrc.package_name + '/';
 
 var
@@ -34,7 +34,7 @@ var
         },
         tests: {
             src     : srcPath + 'tests/' + '*.stub',
-            fileName: S('-' + dataSrc.package_name).camelize().s + 'Test.php', // StudlyCaps,,
+            fileName: S('-' + dataSrc.package_name).camelize().s + 'Test.php', // StudlyCaps
             dest    : destPath + 'tests/'
         }
     };
