@@ -10,7 +10,7 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-        <testsuite name="<%= author_username_alt %> Test Suite">
+        <testsuite name="League Test Suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>
