@@ -28,12 +28,12 @@ var
             dest    : destPath
         },
         src  : {
-            src     : srcPath + 'src/' + '*.txt',
+            src     : srcPath + 'src/' + '*.stub',
             fileName: S('-' + dataSrc.package_name).camelize().s + 'Class.php', // StudlyCaps
             dest    : destPath + 'src/'
         },
         tests: {
-            src     : srcPath + 'tests/' + '*.txt',
+            src     : srcPath + 'tests/' + '*.stub',
             fileName: S('-' + dataSrc.package_name).camelize().s + 'Test.php', // StudlyCaps,,
             dest    : destPath + 'tests/'
         }

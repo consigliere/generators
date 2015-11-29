@@ -1,11 +1,15 @@
 <?php
+/**
+ * Created by <%= author_username %> on <%= dateTime.now %>.
+ */
 
-namespace League\Skeleton;
+namespace <%= author_username_sc %>\<%= package_name_sc %>;
 
-class SkeletonClass
+
+class <%= package_name_sc %>Class
 {
     /**
-     * Create a new Skeleton Instance
+     * Create a new <%= package_name_sc %> Instance
      */
     public function __construct()
     {
