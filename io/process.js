@@ -31,58 +31,32 @@ function processGenerate() {
 
     argv.generator = argv.g ? argv.g : argv.generator;
 
-    if ((argv.generator == league.name) || (config.generator == league.name)) {
-        if (((argv.generator == league.name) && (!config.generator)) || ((config.generator == league.name) && (!argv.generator))) {
+    if ((argv.generator === league.name) || (config.generator === league.name)) {
+        if (((argv.generator === league.name) && (!config.generator)) || ((config.generator === league.name) && (!argv.generator))) {
 
             obj      = league;
             countObj = objSize(obj) - 1;
 
-            for (key in obj) {
-                if (obj.hasOwnProperty(key)) {
-                    if ((typeof obj[key].src !== 'undefined') && (typeof obj[key].fileName !== 'undefined') && (typeof obj[key].dest !== 'undefined')) {
-                        if (countObj !== count) {
-                            processFile(obj[key].src, obj[key].fileName, obj[key].dest);
-                        }
-                        else {
-                            return processFile(obj[key].src, obj[key].fileName, obj[key].dest);
-                        }
-                    }
-
-                    count++;
-                }
-            }
+            preProcessFile(obj, countObj);
         }
-    }
-    else if ((argv.generator == composer.name) || (config.generator == composer.name)) {
-        if (((argv.generator == composer.name) && (!config.generator)) || ((config.generator == composer.name) && (!argv.generator))) {
+    } else if ((argv.generator === composer.name) || (config.generator === composer.name)) {
+        if (((argv.generator === composer.name) && (!config.generator)) || ((config.generator === composer.name) && (!argv.generator))) {
 
             obj      = composer;
             countObj = objSize(obj) - 1;
 
-            for (key in obj) {
-                if (obj.hasOwnProperty(key)) {
-                    if ((typeof obj[key].src !== 'undefined') && (typeof obj[key].fileName !== 'undefined') && (typeof obj[key].dest !== 'undefined')) {
-                        if (countObj !== count) {
-                            processFile(obj[key].src, obj[key].fileName, obj[key].dest);
-                        }
-                        else {
-                            return processFile(obj[key].src, obj[key].fileName, obj[key].dest);
-                        }
-                    }
-
-                    count++;
-                }
-            }
+            preProcessFile(obj, countObj);
 
         }
-    }
-    else if ((argv.generator == laravel.name) || (config.generator == laravel.name)) {
-        if (((argv.generator == laravel.name) && (!config.generator)) || ((config.generator == laravel.name) && (!argv.generator))) {
+    } else if ((argv.generator === laravel.name) || (config.generator === laravel.name)) {
+        if (((argv.generator === laravel.name) && (!config.generator)) || ((config.generator === laravel.name) && (!argv.generator))) {
 
             if (argv.ngApps) {
 
                 obj      = ngApps;
                 countObj = objSize(obj) - 1;
+
+                // preProcessFile(obj, countObj);
 
                 for (key in obj) {
                     if (obj.hasOwnProperty(key)) {
@@ -93,11 +67,12 @@ function processGenerate() {
                         }
                     }
                 }
-            }
-            else if (argv.ngApp) {
+            } else if (argv.ngApp) {
 
                 obj      = ngApp;
                 countObj = objSize(obj) - 1;
+
+                // preProcessFile(obj, countObj);
 
                 for (key in obj) {
                     if (obj.hasOwnProperty(key)) {
@@ -113,66 +88,25 @@ function processGenerate() {
             obj      = laravel;
             countObj = objSize(obj) - 1;
 
-            for (key in obj) {
-                if (obj.hasOwnProperty(key)) {
-                    if ((typeof obj[key].src !== 'undefined') && (typeof obj[key].fileName !== 'undefined') && (typeof obj[key].dest !== 'undefined')) {
-                        if (countObj !== count) {
-                            processFile(obj[key].src, obj[key].fileName, obj[key].dest);
-                        }
-                        else {
-                            return processFile(obj[key].src, obj[key].fileName, obj[key].dest);
-                        }
-                    }
-
-                    count++;
-                }
-            }
+            preProcessFile(obj, countObj);
 
         }
-    }
-    else if ((argv.generator == ngApps.name) || (config.generator == ngApps.name)) {
-        if (((argv.generator == ngApps.name) && (!config.generator)) || ((config.generator == ngApps.name) && (!argv.generator))) {
+    } else if ((argv.generator === ngApps.name) || (config.generator === ngApps.name)) {
+        if (((argv.generator === ngApps.name) && (!config.generator)) || ((config.generator === ngApps.name) && (!argv.generator))) {
 
             obj      = ngApps;
             countObj = objSize(obj) - 1;
 
-            for (key in obj) {
-                if (obj.hasOwnProperty(key)) {
-                    if ((typeof obj[key].src !== 'undefined') && (typeof obj[key].fileName !== 'undefined') && (typeof obj[key].dest !== 'undefined')) {
-                        if (countObj !== count) {
-                            processFile(obj[key].src, obj[key].fileName, obj[key].dest);
-                        }
-                        else {
-                            return processFile(obj[key].src, obj[key].fileName, obj[key].dest);
-                        }
-                    }
-
-                    count++;
-                }
-            }
+            preProcessFile(obj, countObj);
 
         }
-    }
-    else if ((argv.generator == ngApp.name) || (config.generator == ngApp.name)) {
-        if (((argv.generator == ngApp.name) && (!config.generator)) || ((config.generator == ngApp.name) && (!argv.generator))) {
+    } else if ((argv.generator === ngApp.name) || (config.generator === ngApp.name)) {
+        if (((argv.generator === ngApp.name) && (!config.generator)) || ((config.generator === ngApp.name) && (!argv.generator))) {
 
             obj      = ngApp;
             countObj = objSize(obj) - 1;
 
-            for (key in obj) {
-                if (obj.hasOwnProperty(key)) {
-                    if ((typeof obj[key].src !== 'undefined') && (typeof obj[key].fileName !== 'undefined') && (typeof obj[key].dest !== 'undefined')) {
-                        if (countObj !== count) {
-                            processFile(obj[key].src, obj[key].fileName, obj[key].dest);
-                        }
-                        else {
-                            return processFile(obj[key].src, obj[key].fileName, obj[key].dest);
-                        }
-                    }
-
-                    count++;
-                }
-            }
+            preProcessFile(obj, countObj);
 
         }
     }
@@ -191,8 +125,7 @@ function processFile(src, fileName, dest) {
             .pipe(template(precompile.dataSrc))
             .pipe(gulp.dest(dest));
 
-    }
-    else {
+    } else {
         gulpDoing = gulp.src(src)
             .pipe(template(precompile.dataSrc))
             .pipe(rename(fileName))
@@ -206,14 +139,14 @@ function processFile(src, fileName, dest) {
 function objSize(obj) {
     var count = 0;
 
-    if (typeof obj == "object") {
+    if (typeof obj === "object") {
 
         if (Object.keys) {
             count = Object.keys(obj).length;
         } else if (window._) {
             count = _.keys(obj).length;
         } else if (window.$) {
-            count = $.map(obj, function () {
+            count = $.map(obj, function() {
                 return 1;
             }).length;
         } else {
@@ -223,6 +156,22 @@ function objSize(obj) {
     }
 
     return count;
+}
+
+function preProcessFile(o, co) {
+    for (key in o) {
+        if (o.hasOwnProperty(key)) {
+            if ((typeof o[key].src !== 'undefined') && (typeof o[key].fileName !== 'undefined') && (typeof o[key].dest !== 'undefined')) {
+                if (co !== count) {
+                    processFile(o[key].src, o[key].fileName, o[key].dest);
+                } else {
+                    return processFile(o[key].src, o[key].fileName, o[key].dest);
+                }
+            }
+
+            count++;
+        }
+    }
 }
 
 module.exports = process;
