@@ -133,7 +133,6 @@ function processFile(src, fileName, dest) {
     }
 
     return gulpDoing;
-
 }
 
 function preProcessFile(o, co) {
@@ -157,7 +156,6 @@ function objSize(obj) {
     var count = 0;
 
     if (typeof obj === "object") {
-
         if (Object.keys) {
             count = Object.keys(obj).length;
         } else if (window._) {
@@ -173,7 +171,6 @@ function objSize(obj) {
                 }
             }
         }
-
     }
 
     return count;
