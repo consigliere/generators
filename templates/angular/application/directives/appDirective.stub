@@ -1,0 +1,25 @@
+/**
+ * Created by <%= author_username %> on <%= dateTime.now %>.
+ */
+
+(function() {
+    'use strict';
+
+    /**
+     * @ngdoc directive
+     * @name app
+     *
+     * @description
+     * _Update the description and restriction._
+     *
+     * @restrict A
+     * */
+    angular.module('app.directives').directive('appDirective', [function() {
+        return {
+            restrict: 'A',
+            link    : function(scope, elem, attr) {
+
+            }
+        };
+    }]);
+})();
