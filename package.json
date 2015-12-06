@@ -12,7 +12,9 @@
   },
   "author"         : "anonymoussc",
   "license"        : "MIT",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies"   : {
+    "gulp-util"    : "^3.0.7",
     "del"          : "^1.1.1",
     "gulp"         : "^3.8.8",
     "gulp-rename"  : "^1.2.0",
