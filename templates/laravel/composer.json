@@ -28,7 +28,7 @@
   },
   "autoload"         : {
     "classmap": [
-      "databases/seeds",
+      "src/seeds",
       "src/controllers",
       "tests"
     ],
