@@ -1,13 +1,13 @@
 /**
- * Created by anonymoussc on 31/03/15 4:39.
+ * Created by anonymous on 31/03/15 4:39.
  */
 
 'use strict';
 
 var moment  = require('moment'),
     S       = require('string'),
-    dataSrc = require('./../../config/dataSrc/dataSrc.json'),
-    cfg     = require('./../../config/config.js');
+    dataSrc = require('./../config/dataSrc/dataSrc.json'),
+    cfg     = require('./../config/config.js');
 
 // path to directory
 var name     = 'ngApp',
