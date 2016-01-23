@@ -10,7 +10,7 @@
 'use strict';
 
 // Load plugins
-var gulp    = require('gulp');
+var gulp = require('gulp');
 
 // Task generate
 gulp.task('generate', require('./tasks/generate.js').generate);
