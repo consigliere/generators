@@ -11,9 +11,7 @@ var moment   = require('moment'),
     config   = require('./../config/config.js'),
     league   = require('./../templates/league.js'),
     composer = require('./../templates/composer.js'),
-    laravel  = require('./../templates/laravel.js'),
-    ngApps   = require('./../templates/ngApps.js'),
-    ngApp    = require('./../templates/ngApp.js');
+    laravel  = require('./../templates/laravel.js');
 
 var
     precompile = {
@@ -39,9 +37,7 @@ var
         config  : config,
         composer: composer,
         laravel : laravel,
-        league  : league,
-        ngApps  : ngApps,
-        ngApp   : ngApp
+        league  : league
     };
 
 function whos_yousername(alt) {

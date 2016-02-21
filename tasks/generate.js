@@ -17,9 +17,7 @@ var gulp       = require('gulp'),
 var config   = precompile.config,
     league   = precompile.league,
     composer = precompile.composer,
-    laravel  = precompile.laravel,
-    ngApps   = precompile.ngApps,
-    ngApp    = precompile.ngApp;
+    laravel  = precompile.laravel;
 
 var key = '', keyProtected = 'name', obj = '', countObj = '', count = 0;
 
@@ -86,24 +84,6 @@ function processGenerate() {
             }
 
             obj      = laravel;
-            countObj = objSize(obj) - 1;
-
-            preProcessFile(obj, countObj);
-
-        }
-    } else if ((argv.generator === ngApps.name) || (config.generator === ngApps.name)) {
-        if (((argv.generator === ngApps.name) && (!config.generator)) || ((config.generator === ngApps.name) && (!argv.generator))) {
-
-            obj      = ngApps;
-            countObj = objSize(obj) - 1;
-
-            preProcessFile(obj, countObj);
-
-        }
-    } else if ((argv.generator === ngApp.name) || (config.generator === ngApp.name)) {
-        if (((argv.generator === ngApp.name) && (!config.generator)) || ((config.generator === ngApp.name) && (!argv.generator))) {
-
-            obj      = ngApp;
             countObj = objSize(obj) - 1;
 
             preProcessFile(obj, countObj);
