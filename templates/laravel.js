@@ -1,4 +1,5 @@
 /**
+ * laravel.js
  * Created by anonymous on 08/03/15 11:05.
  */
 
@@ -19,8 +20,8 @@ var
         name : name,
         base : {
             src     : [
-                srcPath + '**/**/.*',
-                srcPath + '**/**/*.*',
+                srcPath + '**/**/**/.*',
+                srcPath + '**/**/**/*.*',
                 '!' + srcPath + 'src/laravel/*.stub',
                 '!' + srcPath + 'tests/'
             ],
