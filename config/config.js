@@ -11,7 +11,7 @@ var
         // path to workspace directory
         workspaces        : './app_components',
         // path to template directory
-        templatesDirectory: './tasks/generators/templates'
+        templatesDirectory: './app_components/einherjars/generators/templates'
     };
 
 module.exports = config;
