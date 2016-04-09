@@ -1,4 +1,5 @@
 /**
+ * config.js
  * Created by anonymous on 08/03/15 9:43.
  */
 
